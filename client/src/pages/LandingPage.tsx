@@ -41,26 +41,49 @@ const itemVariants = {
 const LandingPage: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen w-full bg-lime-400 overflow-hidden">
-      <motion.div 
+      <motion.div   
         className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.p 
-          className='text-2xl md:text-3xl font-semibold -mb-10 mt-20 text-center'
+          className='text-xl md:text-3xl font-semibold -mb-10 mt-20 text-center'
           variants={itemVariants}
         >
-          Hello, Welcome to my
+          Hello, <span className='md:hidden text-lime-800'>I'm Dyan Azana</span> Welcome to my
         </motion.p>
         <motion.h1 
-          className='text-6xl md:text-8xl lg:text-[200px] changa-one-regular text-center leading-none'
+          className='text-7xl md:text-8xl lg:text-[200px] changa-one-regular text-center leading-none mt-8 md:mt-0'
           variants={itemVariants}
         >
           PORTFOLIO
         </motion.h1>
+        
+        {/* Mobile Skills List */}
+        <div className="absolute top-1/2 transform ml-20 -translate-x-1/2 -translate-y-1/2 md:hidden text-left px-7 mb-6 z-50">
+          <motion.ul 
+            className="space-y-2"
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ staggerChildren: 0.1, delayChildren: 0.3 }}
+          >
+            {['UI/UX Designer', 'Web & Mobile Developer', 'Graphic Designer', '2D Animator'].map((skill, index) => (
+              <motion.li
+                key={index}
+                className="text-base font-medium text-lime-900 bg-white/10 backdrop-blur-sm p-2 rounded-lg border border-white/30"
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                {skill}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </div>
+        
         <motion.div 
-          className="relative -mt-20 md:-mt-20 w-full max-w-2xl"
+          className="relative -mt-10 md:-mt-20 w-full max-w-2xl ml-50 md:ml-0"
           variants={itemVariants}
         >
           <div className="relative">
@@ -74,7 +97,7 @@ const LandingPage: React.FC = () => {
           
           {/* Floating text box */}
           <motion.div 
-            className="absolute -right-4 md:-right-50 top-1/2 -translate-y-1/2 w-64 md:w-md bg-white/30 backdrop-blur-sm p-6 rounded-xl shadow-xl z-50 border border-white/30 text-end"
+            className="hidden md:block absolute -right-4 md:-right-50 md:top-1/2 top-10 -translate-y-1/2 w-64 md:w-md bg-white/30 backdrop-blur-sm p-6 rounded-xl shadow-xl z-50 border border-white/30 text-end"
             initial={{ x: 30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.5 }}
