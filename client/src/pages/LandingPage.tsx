@@ -14,7 +14,7 @@ import indesign from '../assets/indesign.png';
 import reactJS from '../assets/reactJS.png';
 import npm from '../assets/npm.png';
 import afterEffect from '../assets/aftereffects.png';
-
+import ContactFooter from '../components/ContactFooter';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -40,38 +40,38 @@ const itemVariants = {
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-lime-400 overflow-hidden">
+    <div className="flex flex-col min-h-screen w-full bg-lime-600 overflow-hidden">
       <motion.div   
-        className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto "
+        className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto flex-grow"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.p 
-          className='text-xl md:text-3xl font-semibold -mb-10 mt-20 text-center'
+          className='text-xl md:text-3xl font-semibold -mb-10 mt-20 text-center text-lime-950'
           variants={itemVariants}
         >
           Hello, <span className='md:hidden text-lime-800'>I'm Dyan Azana</span> Welcome to my
         </motion.p>
         <motion.h1 
-          className='text-7xl md:text-8xl lg:text-[200px] changa-one-regular text-center leading-none mt-8 md:mt-0'
+          className='text-7xl md:text-8xl lg:text-[200px] changa-one-regular text-center leading-none mt-8 md:mt-0 text-lime-950'
           variants={itemVariants}
         >
           PORTFOLIO
         </motion.h1>
         
-        {/* Mobile Skills List */}
-        <div className="absolute top-1/2 transform ml-20 -translate-x-1/2 -translate-y-1/2 md:hidden text-left px-7 mb-6 z-50">
+        {/* Mobile Skills List - Left Aligned */}
+        <div className="absolute top-[40%] left-4 -translate-y-1/2 w-auto md:hidden z-50">
           <motion.ul 
-            className="space-y-2"
+            className="space-y-3"
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ staggerChildren: 0.1, delayChildren: 0.3 }}
           >
-            {['UI/UX Designer', 'Web & Mobile Developer', 'Graphic Designer', '2D Animator'].map((skill, index) => (
+            {['UI/UX Designer', 'Web & Mobile Dev', 'Graphic Designer', '2D Animator'].map((skill, index) => (
               <motion.li
                 key={index}
-                className="text-base font-medium text-lime-900 bg-white/10 backdrop-blur-sm p-2 rounded-lg border border-white/30"
+                className="text-base font-medium text-lime-900 bg-white/30 backdrop-blur-sm p-3 pr-6 rounded-r-lg border-r border-t border-b border-white/30 w-auto"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3 }}
@@ -87,7 +87,7 @@ const LandingPage: React.FC = () => {
           variants={itemVariants}
         >
           <div className="relative">
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-lime-400/80 to-transparent z-10 rounded-b-lg" />
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-lime-600/80 to-transparent z-10 rounded-b-lg" />
             <img 
               src={myImage} 
               alt="my-image" 
@@ -104,7 +104,7 @@ const LandingPage: React.FC = () => {
             whileHover={{ y: -5 }}
           >
             <h1 className="text-2xl font-bold text-lime-700 mb-3">I'M DYAN AZAÑA</h1>
-            <p className="text-black text-base leading-relaxed">
+            <p className="text-lime-950 text-base leading-relaxed">
               A passionate UI/UX Researcher and Designer, Web & Mobile Developer, and Graphic Designer.
             </p>
           </motion.div>
@@ -360,6 +360,8 @@ const LandingPage: React.FC = () => {
           </motion.div>
         </motion.div>
       </motion.div>
+      {/* Add Contact Footer */}
+      <ContactFooter />
     </div>
   );
 };
