@@ -61,7 +61,7 @@ const LandingPage: React.FC = () => {
         </motion.h1>
         
         {/* Mobile Skills List - Left Aligned */}
-        <div className="absolute top-[40%] left-4 -translate-y-1/2 w-auto md:hidden z-50">
+        <div className="absolute top-[40%] left-4 w-auto md:hidden z-50">
           <motion.ul 
             className="space-y-3"
             initial={{ x: -20, opacity: 0 }}
