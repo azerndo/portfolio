@@ -51,7 +51,7 @@ const LandingPage: React.FC = () => {
           className='text-xl md:text-3xl font-semibold -mb-10 mt-20 text-center text-lime-950'
           variants={itemVariants}
         >
-          Hello, <span className='md:hidden text-lime-800'>I'm Dyan Azana</span> Welcome to my
+          Hello, <span className='md:hidden text-lime-800'>I'm Dyan Azana</span> <br />Welcome to my
         </motion.p>
         <motion.h1 
           className='text-7xl md:text-8xl lg:text-[200px] changa-one-regular text-center leading-none mt-8 md:mt-0 text-lime-950'
