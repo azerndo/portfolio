@@ -71,7 +71,7 @@ const LandingPage: React.FC = () => {
             {['UI/UX Designer', 'Web & Mobile Dev', 'Graphic Designer', '2D Animator'].map((skill, index) => (
               <motion.li
                 key={index}
-                className="text-base font-medium text-lime-900 bg-white/30 backdrop-blur-sm p-3 pr-6 rounded-r-lg border-r border-t border-b border-white/30 w-auto"
+                className="text-base font-medium text-lime-900 bg-white/30 backdrop-blur-sm p-3 pr-6 rounded-lg border-r border-t border-b border-white/30 w-auto"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3 }}
