@@ -76,9 +76,9 @@ const MyWorks: React.FC = () => {
           My Works
         </h1>
         
-        {/* Project Navigation */}
+        {/* Project Navigation - Hidden on mobile, shown on md screens and up */}
         {projects.length > 1 && (
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="hidden md:flex justify-center gap-4 mb-8">
             <button
               onClick={handlePrevProject}
               className="px-4 py-2 bg-lime-100 text-lime-800 rounded-lg hover:bg-lime-200 transition-all ease-in-out duration-300 cursor-pointer hover:scale-105"
@@ -174,6 +174,40 @@ const MyWorks: React.FC = () => {
             </div>
           </div>
         </div>
+        
+        {/* Project Navigation - Shown on mobile, hidden on md screens and up */}
+        {projects.length > 1 && (
+          <div className="md:hidden flex flex-col items-center gap-4 mt-8 pt-6 border-t border-gray-200">
+            <div className="flex items-center gap-2">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedProjectIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all ease-in-out duration-300 cursor-pointer hover:scale-105 ${
+                    index === selectedProjectIndex ? 'bg-lime-700' : 'bg-lime-300'
+                  }`}
+                  aria-label={`Go to project ${index + 1}`}
+                />
+              ))}
+            </div>
+            <div className="flex gap-4">
+              <button
+                onClick={handlePrevProject}
+                className="px-6 py-2 bg-lime-100 text-lime-800 rounded-lg hover:bg-lime-200 transition-all ease-in-out duration-300 cursor-pointer hover:scale-105"
+                aria-label="Previous project"
+              >
+                ← Previous
+              </button>
+              <button
+                onClick={handleNextProject}
+                className="px-6 py-2 bg-lime-100 text-lime-800 rounded-lg hover:bg-lime-200 transition-all ease-in-out duration-300 cursor-pointer hover:scale-105"
+                aria-label="Next project"
+              >
+                Next →
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
