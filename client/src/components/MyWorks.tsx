@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import projectsData from '../data/projects.json';
 import waterflowDesktop from "../assets/waterflow/waterflow-desktop.jpg"
 import waterflowPersonnel from "../assets/waterflow/waterflow-personnel-mobile.jpg"
@@ -41,6 +41,7 @@ const imageMap: { [key: string]: string } = {
 const MyWorks: React.FC = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState<number>(0);
   const [projects, setProjects] = useState<Project[]>([]);
+  const projectContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Map the imported JSON data to include the actual image imports
@@ -51,17 +52,34 @@ const MyWorks: React.FC = () => {
     setProjects(mappedProjects);
   }, []);
 
+  const scrollToTop = () => {
+    if (projectContainerRef.current) {
+      projectContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleNextProject = () => {
-    setSelectedProjectIndex((prevIndex) => 
-      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-    );
+    setSelectedProjectIndex((prevIndex) => {
+      const newIndex = prevIndex === projects.length - 1 ? 0 : prevIndex + 1;
+      // Reset scroll position after state update
+      setTimeout(scrollToTop, 100);
+      return newIndex;
+    });
   };
 
   const handlePrevProject = () => {
-    setSelectedProjectIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-    );
+    setSelectedProjectIndex((prevIndex) => {
+      const newIndex = prevIndex === 0 ? projects.length - 1 : prevIndex - 1;
+      // Reset scroll position after state update
+      setTimeout(scrollToTop, 100);
+      return newIndex;
+    });
   };
+
+  // Reset scroll position when project changes
+  useEffect(() => {
+    scrollToTop();
+  }, [selectedProjectIndex]);
 
   if (projects.length === 0) {
     return <div className="text-center py-12">Loading projects...</div>;
@@ -70,7 +88,7 @@ const MyWorks: React.FC = () => {
   const currentProject = projects[selectedProjectIndex];
 
   return (
-    <div className='w-full py-12 px-4 sm:px-6 lg:px-8' id="works">
+    <div className='w-full py-12 px-4 sm:px-6 lg:px-8' id="works" ref={projectContainerRef}>
       <div className='max-w-7xl mx-auto'>
         <h1 className='text-4xl changa-one-regular text-center text-lime-800 mb-12 font-serif'>
           My Works
