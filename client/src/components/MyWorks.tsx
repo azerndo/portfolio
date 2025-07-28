@@ -70,7 +70,7 @@ const MyWorks: React.FC = () => {
   const currentProject = projects[selectedProjectIndex];
 
   return (
-    <div className='w-full py-12 px-4 sm:px-6 lg:px-8 bg-gray-50' id="works">
+    <div className='w-full py-12 px-4 sm:px-6 lg:px-8' id="works">
       <div className='max-w-7xl mx-auto'>
         <h1 className='text-4xl changa-one-regular text-center text-lime-800 mb-12 font-serif'>
           My Works
