@@ -1,0 +1,73 @@
+[
+  {
+    "id": 0,
+    "title": "Waterflow",
+    "description": "A comprehensive Waterworks Management System for San Jacinto, Masbate. This integrated platform revolutionizes water utility management through three interconnected applications: a main administrative system, a personnel mobile app for field operations, and a consumer web portal for bill management and service requests.",
+    "images": [
+      "waterflow/waterflow-desktop.jpg",
+      "waterflow/waterflow-personnel-mobile.jpg",
+      "waterflow/waterflow-consumer-mobile.jpg"
+    ],
+    "tags": ["Web Application", "React Native App", "Responsive Design", "Government System"],
+    "keyFeatures": [
+      "AI-powered analytics for water consumption forecasting and leak detection",
+      "Generate billing system",
+      "Personnel task management and work order assignment",
+      "Consumer self-service portal for bill payments and service requests",
+      "Multi-platform accessibility (Desktop, Mobile Web, Native Mobile)",
+      "Comprehensive reporting dashboard for municipal administrators"
+    ],
+    "role": "UI/UX Researcher and Designer, Lead Front-end Developer",
+    "techStack": {
+      "frontend": ["ReactJS", "React Native", "TypeScript", "Tailwind CSS"],
+      "backend": ["Node.js", "Express.js"],
+      "database": ["PostgreSQL"]
+    }
+  },
+  {
+    "id": 2,
+    "title": "JuanHotels",
+    "description": "JuanHotels is a comprehensive hotel management system designed specifically for Masbate's hospitality industry. As part of the JuanTicao ecosystem, it provides an all-in-one solution for hotel and resort operations, from reservation management to guest services, tailored for Filipino hospitality businesses.",
+    "images": [
+      "juanHotels/image1.jpg",
+      "juanHotels/image2.jpg",
+      "juanHotels/image3.jpg"
+    ],
+    "tags": ["Web Application", "Hotel Management", "Responsive Design", "SaaS Platform"],
+    "keyFeatures": [
+      "Cloud-based accessibility for remote hotel management and monitoring",
+      "Integrated booking engine with real-time room availability and pricing",
+      "Comprehensive guest management system with check-in/check-out automation",
+      "Inventory management for amenities, linens, and hotel supplies"
+    ],
+    "role": "UI/UX Researcher and Designer, Lead Front-end Developer",
+    "techStack": {
+      "frontend": ["ReactJS", "TypeScript", "Tailwind CSS"],
+      "backend": ["FastAPI", "Python"],
+      "database": ["PostgreSQL"]
+    }
+  },
+  {
+    "id": 3,
+    "title": "iEnroll",
+    "description": "iEnroll is a digital enrollment platform specifically designed to modernize the enrollment process for public schools across the Philippines. The system eliminates long queues and paperwork by providing a seamless online enrollment experience that's accessible to Filipino families.",
+    "images": [
+      "iEnroll/desktop.jpg",
+      "iEnroll/mobile.jpg",
+      "iEnroll/ienroll-logo.jpg"
+    ],
+    "tags": ["Web Application", "Education Platform", "Government Compliance", "Responsive Design"],
+    "keyFeatures": [
+      "Multi-language support (Filipino, English) for inclusive accessibility",
+      "Step-by-step enrollment wizard with document upload capabilities",
+      "Parent portal for enrollment status monitoring",
+      "Administrative dashboard for school staff with bulk enrollment processing"
+    ],
+    "role": "UI/UX Researcher and Designer, Lead Front-end Developer",
+    "techStack": {
+      "frontend": ["ReactJS","TypeScript"],
+      "backend": ["Node.js"],
+      "database": ["PostgreSQL"]
+    }
+  }
+]

@@ -15,6 +15,7 @@ import reactJS from '../assets/reactJS.png';
 import npm from '../assets/npm.png';
 import afterEffect from '../assets/aftereffects.png';
 import ContactFooter from '../components/ContactFooter';
+import MyWorks from '../components/MyWorks';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -51,7 +52,7 @@ const LandingPage: React.FC = () => {
           className='text-xl md:text-3xl font-semibold -mb-10 mt-20 text-center text-lime-950'
           variants={itemVariants}
         >
-          Hello, <span className='md:hidden text-lime-800'>I'm Dyan Azana</span> <br />Welcome to my
+          Hello, <span className='md:hidden text-lime-800'>I'm Dyan Azana</span> <br className='md:hidden' />Welcome to my
         </motion.p>
         <motion.h1 
           className='text-7xl md:text-8xl lg:text-[200px] changa-one-regular text-center leading-none mt-8 md:mt-0 text-lime-950'
@@ -360,7 +361,13 @@ const LandingPage: React.FC = () => {
           </motion.div>
         </motion.div>
       </motion.div>
-      {/* Add Contact Footer */}
+      {/* my works */}
+      <motion.div
+        className='bg-white w-full mx-auto p-10 z-50 drop-shadow-lg'
+      >
+        <MyWorks />
+      </motion.div>
+      {/* Contact Footer */}
       <ContactFooter />
     </div>
   );
