@@ -22,7 +22,8 @@
       "frontend": ["ReactJS", "React Native", "TypeScript", "Tailwind CSS"],
       "backend": ["Node.js", "Express.js"],
       "database": ["PostgreSQL"]
-    }
+    },
+    "caseStudyUrl": "/projects/waterworks-management-system"
   },
   {
     "id": 2,

@@ -9,6 +9,8 @@ import juanHotelsImage3 from "../assets/juanHotels/image3.jpg"
 import iEnrollDesktop from "../assets/iEnroll/desktop.jpg"
 import iEnrollMobile from "../assets/iEnroll/mobile.jpg"
 import iEnrollLogo from "../assets/iEnroll/ienroll-logo.jpg"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 interface Project {
   id: number;
@@ -23,6 +25,7 @@ interface Project {
     backend: string[];
     database: string[];
   };
+  caseStudyUrl?: string;
 }
 
 // Image mapping for dynamic imports
@@ -190,6 +193,14 @@ const MyWorks: React.FC = () => {
                 </ul>
               </div>
             </div>
+            {currentProject.caseStudyUrl && (
+              <a 
+                href={currentProject.caseStudyUrl}
+                className="mt-4 inline-flex items-center text-lime-800 hover:text-lime-600 font-medium transition-all ease-in-out duration-300 cursor-pointer hover:scale-105"
+              >
+                View Case Study <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+              </a>
+            )}
           </div>
         </div>
         
