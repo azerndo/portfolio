@@ -9,7 +9,7 @@ export const routes: RouteObject[] = [
     element: <LandingPage />
   },
   {
-    path: "/projects/waterworks-management-system",
+    path: "waterworks-management-system",
     element: <WaterflowCaseStudy />
   },
   {
