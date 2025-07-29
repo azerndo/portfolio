@@ -23,7 +23,7 @@
       "backend": ["Node.js", "Express.js"],
       "database": ["PostgreSQL"]
     },
-    "caseStudyUrl": "/projects/waterworks-management-system"
+    "caseStudyUrl": "/waterworks-management-system"
   },
   {
     "id": 2,
