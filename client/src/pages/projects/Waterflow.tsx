@@ -149,15 +149,15 @@ const Waterflow: React.FC = () => {
                 <h4 className="text-gray-500 font-medium mb-4">Desktop for Waterworks Admin</h4>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start">
-                    <span className="text-cyan-500 mr-2">•</span>
+                    <span className="text-cyan-600 mr-2">•</span>
                     Centralized consumer records & billing
                   </li>
                   <li className="flex items-start">
-                    <span className="text-cyan-500 mr-2">•</span>
+                    <span className="text-cyan-600 mr-2">•</span>
                     Personnel & task management
                   </li>
                   <li className="flex items-start">
-                    <span className="text-cyan-500 mr-2">•</span>
+                    <span className="text-cyan-600 mr-2">•</span>
                     AI-powered analytics & forecasting
                   </li>
                 </ul>
@@ -172,11 +172,11 @@ const Waterflow: React.FC = () => {
                 <h4 className="text-gray-500 font-medium mb-4">Field Personnel</h4>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start">
-                    <span className="text-lime-500 mr-2">•</span>
+                    <span className="text-green-600 mr-2">•</span>
                     Offline functionality
                   </li>
                   <li className="flex items-start">
-                    <span className="text-lime-500 mr-2">•</span>
+                    <span className="text-green-600 mr-2">•</span>
                     Task management & meter readings
                   </li>
                   <li className="flex items-start">
@@ -195,11 +195,11 @@ const Waterflow: React.FC = () => {
                 <h4 className="text-gray-500 font-medium mb-4">Consumer Portal</h4>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start">
-                    <span className="text-purple-500 mr-2">•</span>
+                    <span className="text-purple-600 mr-2">•</span>
                     Bill viewing & history
                   </li>
                   <li className="flex items-start">
-                    <span className="text-purple-500 mr-2">•</span>
+                    <span className="text-purple-600 mr-2">•</span>
                     Online payments via PayMongo
                   </li>
                   <li className="flex items-start">
@@ -207,25 +207,6 @@ const Waterflow: React.FC = () => {
                     Service request chatting
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Results Section */}
-          <div className="bg-cyan-900 text-white rounded-xl p-8 mb-12">
-            <h2 className="text-3xl font-bold mb-6">Results & Impact</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">50%</div>
-                <p>Faster billing process</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">100%</div>
-                <p>Reduction in lost records</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">30%</div>
-                <p>Less field operator downtime</p>
               </div>
             </div>
           </div>
@@ -290,6 +271,25 @@ const Waterflow: React.FC = () => {
                   className="rounded-lg shadow-md h-96 w-auto"
                 />
                 <p className="text-cyan-800 text-center text-sm mt-5">Consumer Wep Application which aims to ease the bill posting process, bills payment, and service request of each registered consumers.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Results Section */}
+          <div className="bg-cyan-900 text-white rounded-xl p-8 mb-12">
+            <h2 className="text-3xl font-bold mb-6">Results & Impact</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">50%</div>
+                <p>Faster billing process</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">88%</div>
+                <p>Reduction in lost records</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">30%</div>
+                <p>Less field operator downtime</p>
               </div>
             </div>
           </div>
